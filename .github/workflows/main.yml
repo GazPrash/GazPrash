@@ -14,13 +14,19 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      # - name: Checkout Repository
+      #   uses: actions/checkout@v3
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '16'
+
+      - name: Setup Metrics
+        uses: lowlighter/metrics@latest
         with:
-          user: GazPrash # Change this to your GitHub username
-          filename: github.custom_metrics.svg
+          # Your GitHub username
           token: ${{ secrets.METRICS_TOKEN }}
-          base: header, repositories
-          plugin_lines: yes
+          user: GazPrash # Change this to your GitHub username
           template: classic
 
           # Configure stats (as seen in the image)
@@ -34,13 +40,9 @@ jobs:
           # Additional customization (colors and size)
           plugin_languages_details: percentage  # Display language percentage
           plugin_languages_ignored: 'html,css'  # Ignore certain languages (if needed)
-          plugin_languages_sections: most-used, recently-used
-          plugin_languages_recent_load: 400
-          plugin_languages_recent_days: 14
-          plugin_languages_threshold: 0%
 
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          plugin_activity_limit: 5
-          plugin_activity_days: 0
-          plugin_activity_filter: issue, pr, release, fork, review, ref/create
+      - name: Upload Metrics Image
+        uses: actions/upload-artifact@v3
+        with:
+          name: metrics-image
+          path: metrics.svg
