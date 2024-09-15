@@ -10,13 +10,13 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     environment: 
-      name: production
+      name: ghMetricsToken
     permissions:
       contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          filename: metrics.classic.svg
+          filename: metrics.classic.svg, metrics.plugin.isocalendar.fullyear.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, repositories
           plugin_lines: yes
@@ -24,3 +24,5 @@ jobs:
           plugin_languages_sections: recently-used
           plugin_languages_recent_load: 400
           plugin_languages_recent_days: 14
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
