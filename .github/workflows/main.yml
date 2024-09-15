@@ -30,7 +30,7 @@ jobs:
           template: classic
 
           # Configure stats (as seen in the image)
-          plugin_activity: yes           # Show recent activity (commits, issues, etc.)
+          # plugin_activity: yes           # Show recent activity (commits, issues, etc.)
           plugin_languages: yes          # Display most used languages
           plugin_repositories: yes       # Show repository stats (forks, stargazers, etc.)
           plugin_achievements: yes       # Enable achievement badges
@@ -44,15 +44,17 @@ jobs:
           plugin_activity_filter: issue, pr, release, fork, review, ref/create
 
           # Additional customization (colors and size)
+          plugin_repositories_pinned: 1
           plugin_languages_details: percentage  # Display language percentage
           plugin_languages_ignored: 'html,css'  # Ignore certain languages (if needed)
           plugin_languages_sections: 'most-used,recently-used'
           plugin_languages_recent_load: 400
-          plugin_languages_recent_days: 14
+          plugin_languages_recent_days: 90
           plugin_languages_threshold: 0%
 
           plugin_projects: yes
           plugin_projects_repositories: GazPrash/metrics/projects/2
+
 
       - name: Upload Metrics Image
         uses: actions/upload-artifact@v3
