@@ -55,6 +55,8 @@ jobs:
           plugin_languages_recent_days: 30
           plugin_languages_threshold: 0%
 
+          plugin_calendar: yes
+
       # - name: Upload Metrics Image
       #   uses: actions/upload-artifact@v3
       #   with:
