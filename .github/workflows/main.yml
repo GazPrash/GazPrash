@@ -24,6 +24,7 @@ jobs:
       - name: Setup Metrics
         uses: lowlighter/metrics@latest
         with:
+          filename: metrics.plugin.calendar.svg
           # Your GitHub username
           token: ${{ secrets.METRICS_TOKEN }}
           user: GazPrash # Change this to your GitHub username
@@ -49,11 +50,12 @@ jobs:
           plugin_languages_ignored: 'html,css'  # Ignore certain languages (if needed)
           plugin_languages_sections: 'most-used,recently-used'
           plugin_languages_recent_load: 400
-          plugin_languages_recent_days: 90
+          plugin_languages_recent_days: 30
           plugin_languages_threshold: 0%
+          plugin_languages_indepth: true
 
-          plugin_projects: yes
-          plugin_projects_repositories: GazPrash/metrics/projects/2
+          # plugin_projects: yes
+          # plugin_projects_repositories: GazPrash/metrics/projects/2
 
 
       - name: Upload Metrics Image
