@@ -24,9 +24,9 @@ jobs:
       - name: Setup Metrics
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.plugin.calendar.svg
-          # Your GitHub username
           token: ${{ secrets.METRICS_TOKEN }}
+          config_display: large
+          # Your GitHub username
           user: GazPrash # Change this to your GitHub username
           template: classic
 
@@ -54,12 +54,9 @@ jobs:
           plugin_languages_threshold: 0%
           plugin_languages_indepth: true
 
-          # plugin_projects: yes
-          # plugin_projects_repositories: GazPrash/metrics/projects/2
 
-
-      - name: Upload Metrics Image
-        uses: actions/upload-artifact@v3
-        with:
-          name: metrics-image
-          path: metrics.svg
+      # - name: Upload Metrics Image
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: metrics-image
+      #     path: metrics.svg
