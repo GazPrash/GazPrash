@@ -18,12 +18,10 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          config_display: large
+          # config_display: large
           # Your GitHub username
-          user: GazPrash # Change this to your GitHub username
+          # user: GazPrash # Change this to your GitHub username
           template: classic
-
-          plugin_people: yes
-          plugin_repositories: yes       # Show repository stats (forks, stargazers, etc.)
-          plugin_achievements: yes       # Enable achievement badges
-          plugin_repositories_pinned: 1
+          # plugin_repositories: yes       # Show repository stats (forks, stargazers, etc.)
+          # plugin_achievements: yes       # Enable achievement badges
+          # plugin_repositories_pinned: 1
