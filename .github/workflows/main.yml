@@ -39,11 +39,11 @@ jobs:
           plugin_followup: yes           # Show following/follower stats
           plugin_traffic: yes            # Show repository traffic
 
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          plugin_activity_limit: 5
-          plugin_activity_days: 0
-          plugin_activity_filter: issue, pr, release, fork, review, ref/create
+          # plugin_isocalendar: yes
+          # plugin_isocalendar_duration: full-year
+          # plugin_activity_limit: 5
+          # plugin_activity_days: 0
+          # plugin_activity_filter: issue, pr, release, fork, review, ref/create
 
           # Additional customization (colors and size)
           plugin_repositories_pinned: 1
@@ -55,8 +55,8 @@ jobs:
           plugin_languages_recent_days: 30
           plugin_languages_threshold: 0%
 
-          plugin_calendar: yes
-          plugin_calendar_limit: 0
+          # plugin_calendar: yes
+          # plugin_calendar_limit: 0
 
       # - name: Upload Metrics Image
       #   uses: actions/upload-artifact@v3
