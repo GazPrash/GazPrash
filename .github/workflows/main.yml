@@ -23,7 +23,7 @@ jobs:
           user: GazPrash # Change this to your GitHub username
           template: classic
 
-          plugin_bio: yes  # Add this line to display your GitHub bio
+          plugin_people: yes
           plugin_repositories: yes       # Show repository stats (forks, stargazers, etc.)
           plugin_achievements: yes       # Enable achievement badges
           plugin_repositories_pinned: 1
