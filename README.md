@@ -13,4 +13,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+I sometimes dabble with Low Level stuff. 
+Math Undergrad at NIT Surat • Former Research Intern at Inria-Loria, France
 ![GitHub Metrics](github-metrics.svg)
