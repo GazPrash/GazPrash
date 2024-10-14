@@ -21,7 +21,7 @@ jobs:
           # config_display: large
           # Your GitHub username
           # user: GazPrash # Change this to your GitHub username
-          template: classic
-          # plugin_repositories: yes       # Show repository stats (forks, stargazers, etc.)
-          # plugin_achievements: yes       # Enable achievement badges
-          # plugin_repositories_pinned: 1
+          # template: classic
+          plugin_repositories: yes       # Show repository stats (forks, stargazers, etc.)
+          plugin_achievements: yes       # Enable achievement badges
+          plugin_repositories_pinned: 1
