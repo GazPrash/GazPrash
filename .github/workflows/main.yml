@@ -1,37 +1,37 @@
-name: Metrics
-on:
-  # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
-  workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
-  push: {branches: ["master", "main"]}
-jobs:
-  github-metrics:
-    runs-on: ubuntu-latest
-    environment: 
-      name: ghMetricsToken
-    permissions:
-      contents: write
-    steps:
-      - name: Setup Metrics
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          config_display: large
-          # Your GitHub username
-          user: GazPrash # Change this to your GitHub username
-          template: classic
+# name: Metrics
+# on:
+#   # Schedule daily updates
+#   schedule: [{cron: "0 0 * * *"}]
+#   # (optional) Run workflow manually
+#   workflow_dispatch:
+#   # (optional) Run workflow when pushing on master/main
+#   push: {branches: ["master", "main"]}
+# jobs:
+#   github-metrics:
+#     runs-on: ubuntu-latest
+#     environment: 
+#       name: ghMetricsToken
+#     permissions:
+#       contents: write
+#     steps:
+#       - name: Setup Metrics
+#         uses: lowlighter/metrics@latest
+#         with:
+#           token: ${{ secrets.METRICS_TOKEN }}
+#           config_display: large
+#           # Your GitHub username
+#           user: GazPrash # Change this to your GitHub username
+#           template: classic
 
-          # Configure stats (as seen in the image)
-          # plugin_activity: yes # Show recent activity (commits, issues, etc.)
-          # plugin_activity_types : commits
-          # plugin_languages: yes          # Display most used languages
-          plugin_repositories: yes       # Show repository stats (forks, stargazers, etc.)
-          plugin_achievements: yes       # Enable achievement badges
-          plugin_followup: yes           # Show following/follower stats
-          plugin_traffic: yes            # Show repository traffic
+#           # Configure stats (as seen in the image)
+#           # plugin_activity: yes # Show recent activity (commits, issues, etc.)
+#           # plugin_activity_types : commits
+#           # plugin_languages: yes          # Display most used languages
+#           plugin_repositories: yes       # Show repository stats (forks, stargazers, etc.)
+#           plugin_achievements: yes       # Enable achievement badges
+#           plugin_followup: yes           # Show following/follower stats
+#           plugin_traffic: yes            # Show repository traffic
 
-          plugin_bio: yes  # Add this line to display your GitHub bio
-          # Additional customization (colors and size)
-          plugin_repositories_pinned: 1
+#           plugin_bio: yes  # Add this line to display your GitHub bio
+#           # Additional customization (colors and size)
+#           plugin_repositories_pinned: 1
