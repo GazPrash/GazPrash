@@ -14,13 +14,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      # - name: Checkout Repository
-      #   uses: actions/checkout@v3
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '16'
-
       - name: Setup Metrics
         uses: lowlighter/metrics@latest
         with:
@@ -40,27 +33,5 @@ jobs:
           plugin_traffic: yes            # Show repository traffic
 
           plugin_bio: yes  # Add this line to display your GitHub bio
-          # plugin_isocalendar: yes
-          # plugin_isocalendar_duration: full-year
-          # plugin_activity_limit: 5
-          # plugin_activity_days: 0
-          # plugin_activity_filter: issue, pr, release, fork, review, ref/create
-
           # Additional customization (colors and size)
           plugin_repositories_pinned: 1
-          plugin_languages_indepth: true
-          # plugin_languages_details: percentage  # Display language percentage
-          # plugin_languages_ignored: 'html,css,jupyter notebook'  # Ignore certain languages (if needed)
-          # plugin_languages_sections: 'most-used,recently-used'
-          # plugin_languages_recent_load: 400
-          # plugin_languages_recent_days: 30
-          # plugin_languages_threshold: 0%
-
-          # plugin_calendar: yes
-          # plugin_calendar_limit: 0
-
-      # - name: Upload Metrics Image
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: metrics-image
-      #     path: metrics.svg
