@@ -20,6 +20,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           user: GazPrash
           template: classic
+          config_display: large
           base: header, activity, community, repositories, metadata
           
           # Isometric Commit Calendar
@@ -30,6 +31,8 @@ jobs:
           plugin_languages: yes
           plugin_languages_colors: github
           plugin_languages_details: bytes-size, percentage
+          # Add languages you want to hide here (comma-separated):
+          plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, shell, jupyter notebook
           
           # Coding Habits
           # plugin_habits: yes
