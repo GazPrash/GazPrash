@@ -32,7 +32,7 @@ jobs:
           plugin_languages_colors: github
           plugin_languages_details: bytes-size, percentage
           # Add languages you want to hide here (comma-separated):
-          plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, shell, jupyter notebook
+          plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, jupyter notebook
           
           # Coding Habits
           # plugin_habits: yes
